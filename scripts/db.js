@@ -30,8 +30,8 @@ let dishes = [
         "price": 5.90,
       },
     ]
-    
-let sideDishes [
+
+let sideDishes = [
       {
           "name": "Pommes",
           "price": 7.90,
