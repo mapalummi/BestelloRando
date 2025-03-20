@@ -1,5 +1,9 @@
-body{
+
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
+    display: table;
     background-color: #000000;
 }
 
@@ -7,7 +11,7 @@ header{
     width: 100%;
     height: 80px;
     color: white;
-    background-color: rgba(255, 254, 254, 0.071);
+    background-color: rgb(36, 36, 36);
     display: flex;
     justify-content: center;
     align-items: end;
@@ -32,7 +36,7 @@ header{
 }
 
 #content_container{
-    height: 100vh;
+    /* height: 100vh; */
     flex: 1;
 }
 
@@ -59,7 +63,7 @@ header{
 .container2{
     width: 100%;
     height: 50px;
-    background-color: rgba(128, 128, 128, 0.533);
+    background-color: rgb(36, 36, 36);
     color: white;
 }
 
@@ -82,7 +86,9 @@ header{
 
 
 
-
+/* Gerenderter Inhalt */
+/*  */
+/*  */
 #render_content{
     display: flex;
     flex-direction: column;
@@ -93,38 +99,58 @@ header{
 .dishes_box{
     width: 95%;
     height: 200px;
-    background-color: gray;
+    background-color: rgb(36, 36, 36);
     margin-bottom: 12px;
 }
+/*  */
+/*  */
+/*  */
 
 
 
-
-
-
-
-#sticky_basket{
-    position: sticky;
-    top: 0;
+/* Warenkorb */
+/*  */
+/*  */
+#basket{
     width: 250px;
     height: auto;
-    background-color: rgba(128, 128, 128, 0.571);
+    background-color: rgba(36, 36, 36, 0.611);
+    color: white;
 }
 
 .basket_headline{
+    height: 80px;
     border: 1px solid white;
+    position: sticky;
+    top: 0;
+}
+
+.sticky_content{
+    height: auto;
+    position: sticky;
+    top: 80px;
+    
 }
 
 .hidden_info{
-    color: black;
-}
-
-footer{
-    width: 100%;
-    height: 50px;
-    background-color: rgba(255, 254, 254, 0.071);
+    height: 100px;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+/*  */
+/*  */
+/*  */
+
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(36, 36, 36);
+    color: white;
+    display: table-row;
+    text-align: center;
 }
