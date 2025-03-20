@@ -5,6 +5,7 @@ html, body {
     margin: 0;
     display: table;
     background-color: #000000;
+    scroll-behavior: smooth;
 }
 
 header{
@@ -53,7 +54,7 @@ header h1{
 
 .logo{
     width: 250px;
-    margin: -141px 0;
+    margin: -128px 0;
 }
 
 .nav_container{
@@ -102,7 +103,14 @@ header h1{
 /* Gerenderter Inhalt */
 /*  */
 /*  */
-#render_content{
+#render_section1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#render_section2{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,6 +122,22 @@ header h1{
     height: 200px;
     background-color: rgb(36, 36, 36);
     margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.455);
+}
+
+#add_btn{
+    float: right;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.455);
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.basket_btn{
+    width: 24px;
+    height: 24px;
 }
 /*  */
 /*  */
@@ -174,4 +198,9 @@ footer{
     color: white;
     display: table-row;
     text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
 }
