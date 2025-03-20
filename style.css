@@ -120,9 +120,15 @@ header{
 
 .basket_headline{
     height: 80px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.356);
     position: sticky;
     top: 0;
+}
+
+.basket_headline h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .sticky_content{
