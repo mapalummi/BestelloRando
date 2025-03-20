@@ -32,6 +32,7 @@ header{
 }
 
 #content_container{
+    height: 100vh;
     flex: 1;
 }
 
@@ -58,13 +59,13 @@ header{
 .container2{
     width: 100%;
     height: 50px;
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.533);
     color: white;
 }
 
 .container3{
     width: 100%;
-    height: 100px;
+    height: 300px;
 }
 
 .container3 img{
@@ -73,7 +74,57 @@ header{
     object-fit: cover;
 }
 
+.container4{
+    color: white;
+    font-size: 10px;
+}
+
+
+
+
+
+#render_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dishes_box{
+    width: 95%;
+    height: 200px;
+    background-color: gray;
+    margin-bottom: 12px;
+}
+
+
+
+
+
+
+
 #sticky_basket{
-    width: 300px;
+    position: sticky;
+    top: 0;
+    width: 250px;
     height: auto;
+    background-color: rgba(128, 128, 128, 0.571);
+}
+
+.basket_headline{
+    border: 1px solid white;
+}
+
+.hidden_info{
+    color: black;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 254, 254, 0.071);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
