@@ -8,10 +8,12 @@
     <link rel="shortcut icon" href="./Assets/icons/icons8-favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
 
+    <script src="./scripts/template.js"></script>
+    <script src="./scripts/db.js"></script>
     <script src="./script.js"></script>
 
   </head>
-  <body>
+  <body onload="init()">
     <header>
       <h1>Best Fresh Burger In Town</h1>
     </header>
@@ -29,9 +31,8 @@
         </div>
 
         <div class="nav_container">
-          <a href="#render_section1">Hauptgerichte</a>
-          <a href="#render_section2">Beilagen</a>
-          <a href="#">Desserts</a>
+          <a href="#render_dishes">Hauptgerichte</a>
+          <a href="#render_side_dishes">Beilagen</a>
         </div>
 
         <div class="container3">
@@ -43,41 +44,7 @@
         </div>
 
 
-        <div id="render_section1">
-
-          <div id="dishes_box" onclick="addMenu()">
-            <div>
-              <p class="dishes_box_headline">Burger</p>
-              <p class="dishes_box_menu">mit Pommes</p>
-              <p class="dishes_box_price">7,95 €</p>
-            </div>
-            <div class="add_btn">
-              <img class="basket_icon" src="./Assets/icons/icons8-warenkorb.png" alt="">
-            </div>
-          </div>
-
-
-
-          <div id="dishes_box" onclick="addMenu()">
-            <div>
-              <p class="dishes_box_headline">Burger</p>
-              <p class="dishes_box_menu">mit Pommes</p>
-              <p class="dishes_box_price">7,95 €</p>
-            </div>
-            <div class="add_btn">
-                <img class="basket_icon" src="./Assets/icons/icons8-warenkorb.png" alt="">
-            </div>
-          </div>
-
-          
-
-          
-
-
-
-        </div>
-
-
+        <div id="render_dishes"></div>
 
 
         <div class="container3">
@@ -89,40 +56,9 @@
         </div>
 
 
-        <div id="render_section2">
-
-          <div id="dishes_box">
-            <div id="add_btn">
-              <a href="#/">
-                <img class="basket_btn" src="./Assets/icons/icons8-warenkorb.png" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div id="dishes_box">
-            <div id="add_btn">
-              <a href="#/">
-                <img class="basket_btn" src="./Assets/icons/icons8-warenkorb.png" alt="">
-              </a>
-            </div>
-          </div>
-
-          <div id="dishes_box">
-            <div id="add_btn">
-              <a href="#/">
-                <img class="basket_btn" src="./Assets/icons/icons8-warenkorb.png" alt="">
-              </a>
-            </div>
-          </div>
-          
-        </div>
+        <div id="render_side_dishes"></div>
           
       </div>
-
-
-
-      
-
 
 
       <div id="basket">
@@ -137,63 +73,23 @@
           <div id="render_basket_order">
 
             <div class="basket_order">
-              <p class="dishes_box_headline">Burger</p>
+              <p class="dishes_box_headline">Name des Gerichts</p>
               <div class="order_options">
                 <button class="plus_btn">
                   <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
                 </button>
-                <p>1x</p>
+                <p>Anzahl</p>
                 <button class="minus_btn">
                   <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
                 </button>
-                <p>7,95€</p>
+                <p>Preis in Euro</p>
                 <button class="delete_btn">
                   <img src="./Assets/icons/icons8-müll-white.png" alt="">
                 </button>
               </div>
             </div>
-
-
-            
-            
-            <div class="basket_order">
-              <p class="dishes_box_headline">Burger</p>
-              <div class="order_options">
-                <button class="plus_btn">
-                  <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
-                </button>
-                <p>1x</p>
-                <button class="minus_btn">
-                  <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
-                </button>
-                <p>7,95€</p>
-                <button class="delete_btn">
-                  <img src="./Assets/icons/icons8-müll-white.png" alt="">
-                </button>
-              </div>
-            </div>
-            <div class="basket_order">
-              <p class="dishes_box_headline">Burger</p>
-              <div class="order_options">
-                <button class="plus_btn">
-                  <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
-                </button>
-                <p>1x</p>
-                <button class="minus_btn">
-                  <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
-                </button>
-                <p>7,95€</p>
-                <button class="delete_btn">
-                  <img src="./Assets/icons/icons8-müll-white.png" alt="">
-                </button>
-              </div>
-            </div>
-            
-
-
 
           </div>
-
 
           <div class="hidden_info">
             <span>Wähle leckere Gerichte aus und füge sie deinem Warenkorb hinzu</span>
@@ -201,14 +97,9 @@
 
         </div>
 
-        
-
-
-
       </div>
 
       
-
     </div>
     <footer>
       Icon von <a target="_blank" href="https://icons8.com">Icons8</a>

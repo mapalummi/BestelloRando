@@ -103,14 +103,14 @@ header h1{
 /* Gerenderter Inhalt */
 /*  */
 /*  */
-#render_section1{
+#render_dishes{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#render_section2{
+#render_side_dishes{
     display: flex;
     flex-direction: column;
     justify-content: center;
