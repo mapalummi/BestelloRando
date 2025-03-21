@@ -3,7 +3,7 @@ let dishes = [
       "name": "Burger",
       "info": "Pommes und Salat",
       "price": 5.90,
-      "amount": 0,
+      "amount": 1,
     },
     {
         "name": "Burger Berger",
@@ -56,10 +56,4 @@ let sideDishes = [
         },
 ]
 
-let basket = [
-    {
-      "name": "Testburger",
-      "price": 8.90,
-      "amount": 0,
-  }
-]
+let basket = []
