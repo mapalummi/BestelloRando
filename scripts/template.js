@@ -76,18 +76,19 @@ return `<div id="dishes_box" onclick="addMenu()">
 // }
 
 
-function getBasket(dishesIndex){
+// TEST
+function getBasket(i){
     return `<div class="basket_order">
-    <p class="dishes_box_headline">${dishes[dishesIndex].name}</p>
+    <p class="dishes_box_headline">${dishes[i].name}</p>
     <div class="order_options">
       <button class="plus_btn">
         <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
       </button>
-      <p>${dishes[dishesIndex].amount}</p>
+      <p>${dishes[i].amount}</p>
       <button class="minus_btn">
         <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
       </button>
-      <p>${dishes[dishesIndex].price.toFixed(2)} €</p>
+      <p>${dishes[i].price.toFixed(2)} €</p>
       <button class="delete_btn">
         <img src="./Assets/icons/icons8-müll-white.png" alt="">
       </button>
@@ -95,3 +96,26 @@ function getBasket(dishesIndex){
   </div>
 `;
 }
+
+
+
+// Funktioniert
+// function getBasket(dishesIndex){
+//     return `<div class="basket_order">
+//     <p class="dishes_box_headline">${dishes[dishesIndex].name}</p>
+//     <div class="order_options">
+//       <button class="plus_btn">
+//         <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
+//       </button>
+//       <p>${dishes[dishesIndex].amount}</p>
+//       <button class="minus_btn">
+//         <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
+//       </button>
+//       <p>${dishes[dishesIndex].price.toFixed(2)} €</p>
+//       <button class="delete_btn">
+//         <img src="./Assets/icons/icons8-müll-white.png" alt="">
+//       </button>
+//     </div>
+//   </div>
+// `;
+// }

@@ -1,7 +1,7 @@
 function init(){
     renderMainDishes()
     renderSideDishes()
-    renderBasket()
+    // renderBasket()
 }
 
 // Gerichte rendern
@@ -23,36 +23,42 @@ function renderSideDishes(){
 
 
 // Funktioniert
-function renderBasket(){
+// function renderBasket(){
 
-    for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
-      if (dishes[dishesIndex].amount > 0) {
-            document.getElementById('render_basket_order').innerHTML = getBasket(dishesIndex);
-          }
-      }
-  }
+//     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
+//       if (dishes[dishesIndex].amount > 0) {
+//             document.getElementById('render_basket_order').innerHTML = getBasket(dishesIndex);
+//           }
+//       }
+//   }
 
 function addMenu(dishesIndex){
   dishes[dishesIndex].amount += 1
-
-  console.log(dishes);
   
-  renderBasket()
+  // renderBasket()
+
+  setFilterMethod()
 }
 
 
 
 // Filter Methode zum testen
-function addMenuFilter(){
+function setFilterMethod(){
 
-  result = dishes.filter(dish => dish.amount > 0);
+  newBasket = dishes.filter(dish => dish.amount > 0);
 
-  console.log(result);
-
+  renderNewBasket()
 }
 
+function renderNewBasket(){
+document.getElementById('render_basket_order').innerHTML = '';
 
+for (let i = 0; i < newBasket.length; i++) {
+  document.getElementById('render_basket_order').innerHTML += getBasket(i);
 
+  console.log(newBasket);
+}
+}
 
 
 

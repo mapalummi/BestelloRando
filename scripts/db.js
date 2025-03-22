@@ -3,7 +3,7 @@ let dishes = [
       "name": "Burger",
       "info": "Pommes und Salat",
       "price": 5.90,
-      "amount": 1,
+      "amount": 0,
     },
     {
         "name": "Burger Berger",
