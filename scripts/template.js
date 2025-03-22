@@ -29,7 +29,7 @@ return `<div id="dishes_box" onclick="addMenu()">
 
 
 function getBasket(i){
-    return `<div class="basket_order">
+    return `<div id="basket_order_content${[i]}" class="basket_order">
     <p class="dishes_box_headline">${newBasket[i].name}</p>
     <div class="order_options">
       <button onclick="increaseAmount(${[i]})" class="plus_btn">
@@ -40,7 +40,7 @@ function getBasket(i){
         <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
       </button>
       <p>${newBasket[i].price.toFixed(2)} €</p>
-      <button class="delete_btn">
+      <button onclick="deleteFromBasket(${[i]})" class="delete_btn">
         <img src="./Assets/icons/icons8-müll-white.png" alt="">
       </button>
     </div>

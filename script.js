@@ -49,16 +49,24 @@ function renderNewBasket(){
 }
 
 
-// Add-Button im Warenkorb:
+// Add-Button Warenkorb:
 function increaseAmount(i){
   newBasket[i].amount += 1
 
   setFilterMethod()
 }
 
-// Sub-Button im Warenkorb:
+
+// Hier noch die Reduktion bis auf max 1 beschränken!!!
+// Sub-Button Warenkorb:
 function decreaseAmount(i){
   newBasket[i].amount -= 1
 
   setFilterMethod()
+}
+
+
+// Delete-Button Warenkorb:
+function deleteFromBasket(i){
+  document.getElementById(`basket_order_content${[i]}`).innerHTML = "";
 }
