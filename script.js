@@ -1,12 +1,15 @@
 function init(){
     renderMainDishes()
     renderSideDishes()
-    // renderBasket()
+   
 }
 
-// Gerichte rendern
+
+// Gerichte rendern:
 function renderMainDishes(){
-    
+  document.getElementById('render_dishes').innerHTML = "";
+
+
     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         document.getElementById('render_dishes').innerHTML += getDishes(dishesIndex);
     } 
@@ -21,28 +24,16 @@ function renderSideDishes(){
 
 
 
-
-// Funktioniert
-// function renderBasket(){
-
-//     for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
-//       if (dishes[dishesIndex].amount > 0) {
-//             document.getElementById('render_basket_order').innerHTML = getBasket(dishesIndex);
-//           }
-//       }
-//   }
-
+// Menü hinzufügen zum Warenkorb:
 function addMenu(dishesIndex){
   dishes[dishesIndex].amount += 1
-  
-  // renderBasket()
 
   setFilterMethod()
 }
 
 
 
-// Filter Methode zum testen
+// Filter Methode:
 function setFilterMethod(){
 
   newBasket = dishes.filter(dish => dish.amount > 0);
@@ -50,31 +41,15 @@ function setFilterMethod(){
   renderNewBasket()
 }
 
+
+
+// Warenkorb rendern:
 function renderNewBasket(){
-document.getElementById('render_basket_order').innerHTML = '';
+document.getElementById('render_basket_order').innerHTML = "";
 
 for (let i = 0; i < newBasket.length; i++) {
   document.getElementById('render_basket_order').innerHTML += getBasket(i);
 
-  console.log(newBasket);
+  // console.log(newBasket);
 }
 }
-
-
-
-
-// Druckt nur neue Einträge ins Array und den Warenkorb
-// function addMenu(dishesIndex){
-//   basket.push(dishes[dishesIndex]);
-
-//   console.log(basket);
-
-//   renderBasket();
-// }
-
-
-// Menü dem Warenkorb hinzufügen
-// function addMenu(dishesIndex){
-//   document.getElementById('render_basket_order').innerHTML = getBasketOrder(dishesIndex);
-//   dishes[dishesIndex].amount += 1
-// }
