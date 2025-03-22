@@ -290,6 +290,19 @@ header h1{
 /*  */
 
 
+.basket_overlay_style{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 100vh;
+    width: 90%;
+    background-color: antiquewhite;
+}
+
+
+
+
+
 
 footer{
     width: 100%;

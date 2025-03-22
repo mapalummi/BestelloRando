@@ -1,7 +1,7 @@
 function init(){
     renderMainDishes()
     renderSideDishes()
-   
+    renderInfoField()
 }
 
 
@@ -46,29 +46,68 @@ function renderNewBasket(){
   for (let i = 0; i < newBasket.length; i++) {
     document.getElementById('render_basket_order').innerHTML += getBasket(i);
   }
+
+  renderInfoField()
 }
+
+
+
+
+// add-Button TEST:
+function increaseAmount(i){
+    newBasket[i].amount += 1
+    newBasket[i].price += newBasket[i].price
+  
+    setFilterMethod()
+  }
+
 
 
 // Add-Button Warenkorb:
-function increaseAmount(i){
-  newBasket[i].amount += 1
+// function increaseAmount(i){
+//   newBasket[i].amount += 1
+//   newBasket[i].price += 5.90
 
-  setFilterMethod()
-}
+//   setFilterMethod()
+// }
 
-
-// Hier noch die Reduktion bis auf max 1 beschränken!!!
 // Sub-Button Warenkorb:
 function decreaseAmount(i){
-  newBasket[i].amount -= 1
+
+  if (newBasket[i].amount > 1) {
+    newBasket[i].amount -= 1
+    // newBasket[i].price -= 5.90
+  } 
+
+  // newBasket[i].amount -= 1
 
   setFilterMethod()
 }
-
 
 // Delete-Button Warenkorb:
 function deleteFromBasket(i){
   newBasket[i].amount = 0
+  // newBasket[i].price = 0
 
   setFilterMethod()
 }
+
+
+
+
+function renderInfoField(){
+
+  let hiddenInfo = document.getElementById('render_basket_order').innerHTML;
+
+  if (hiddenInfo !== "" || null || 0) {
+    document.getElementById('hidden_info_container').classList.add("d_none");
+  } else {
+    document.getElementById('hidden_info_container').classList.remove("d_none");
+  } 
+}
+
+
+function showOverlay(){
+  document.getElementById('basket_overlay').classList.remove("d_none");
+}
+

@@ -6,7 +6,7 @@
     <title>BestelloRando</title>
 
     <link rel="shortcut icon" href="./Assets/icons/icons8-favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./styles/basket.css">
     <link rel="stylesheet" href="./styles/assets.css">
 
@@ -63,7 +63,7 @@
         <div id="render_side_dishes"></div>
         
         <div class="button_container">
-          <button class="button">WARENKORB</button>
+          <button onclick="showOverlay()" class="button">WARENKORB</button>
         </div>
         
 
@@ -101,7 +101,7 @@
 
 
 
-          <div class="hidden_info d_none">
+          <div id="hidden_info_container" class="hidden_info">
             <span>Wähle leckere Gerichte aus und füge sie deinem Warenkorb hinzu</span>
           </div>
 
@@ -109,6 +109,10 @@
 
       </div>
 
+
+      <div id="overlay" class="overlay_style">
+        <div id="basket_overlay" class="basket_overlay_style d_none">Hier kommt der Warenkorb-Inhalt rein</div>
+      </div>
       
     </div>
 
