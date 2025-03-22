@@ -9,10 +9,9 @@ function init(){
 function renderMainDishes(){
   document.getElementById('render_dishes').innerHTML = "";
 
-
-    for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
+  for (let dishesIndex = 0; dishesIndex < dishes.length; dishesIndex++) {
         document.getElementById('render_dishes').innerHTML += getDishes(dishesIndex);
-    } 
+  } 
 }
 
 function renderSideDishes(){
@@ -23,14 +22,12 @@ function renderSideDishes(){
 }
 
 
-
 // Menü hinzufügen zum Warenkorb:
 function addMenu(dishesIndex){
   dishes[dishesIndex].amount += 1
 
   setFilterMethod()
 }
-
 
 
 // Filter Methode:
@@ -42,14 +39,26 @@ function setFilterMethod(){
 }
 
 
-
 // Warenkorb rendern:
 function renderNewBasket(){
-document.getElementById('render_basket_order').innerHTML = "";
+  document.getElementById('render_basket_order').innerHTML = "";
 
-for (let i = 0; i < newBasket.length; i++) {
-  document.getElementById('render_basket_order').innerHTML += getBasket(i);
-
-  // console.log(newBasket);
+  for (let i = 0; i < newBasket.length; i++) {
+    document.getElementById('render_basket_order').innerHTML += getBasket(i);
+  }
 }
+
+
+// Add-Button im Warenkorb:
+function increaseAmount(i){
+  newBasket[i].amount += 1
+
+  setFilterMethod()
+}
+
+// Sub-Button im Warenkorb:
+function decreaseAmount(i){
+  newBasket[i].amount -= 1
+
+  setFilterMethod()
 }

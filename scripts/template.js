@@ -32,11 +32,11 @@ function getBasket(i){
     return `<div class="basket_order">
     <p class="dishes_box_headline">${newBasket[i].name}</p>
     <div class="order_options">
-      <button class="plus_btn">
+      <button onclick="increaseAmount(${[i]})" class="plus_btn">
         <img src="./Assets/icons/icons8-plus-weiß.png" alt="">
       </button>
       <p>${newBasket[i].amount}</p>
-      <button class="minus_btn">
+      <button onclick="decreaseAmount(${[i]})" class="minus_btn">
         <img src="./Assets/icons/icons8-minus-weiß.png" alt="">
       </button>
       <p>${newBasket[i].price.toFixed(2)} €</p>
