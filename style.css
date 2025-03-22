@@ -41,7 +41,6 @@ header h1{
 }
 
 #content_container{
-    /* height: 100vh; */
     flex: 1;
 }
 
@@ -97,6 +96,10 @@ header h1{
     padding-left: 16px;
 }
 
+.button_container{
+    display: flex;
+    justify-content: center;
+}
 
 
 

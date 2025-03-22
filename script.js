@@ -68,5 +68,7 @@ function decreaseAmount(i){
 
 // Delete-Button Warenkorb:
 function deleteFromBasket(i){
-  document.getElementById(`basket_order_content${[i]}`).innerHTML = "";
+  newBasket[i].amount = 0
+
+  setFilterMethod()
 }

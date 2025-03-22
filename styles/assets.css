@@ -1,0 +1,32 @@
+
+.button {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    padding: 1.2em 1rem;
+    margin-bottom: 12px;
+    cursor: pointer;
+    gap: 0.4rem;
+    font-weight: bold;
+    border-radius: 30px;
+    text-shadow: 2px 2px 3px rgb(136 0 136 / 50%);
+    background: linear-gradient(15deg, #880088, #aa2068, #cc3f47, #de6f3d, #f09f33, #de6f3d, #cc3f47, #aa2068, #880088) no-repeat;
+    background-size: 300%;
+    color: black;
+    border: none;
+    background-position: left center;
+    box-shadow: 0 30px 10px -20px rgba(0,0,0,.2);
+    transition: background .3s ease;
+    display: none;
+  }
+  
+  .button:hover {
+    background-size: 320%;
+    background-position: right center;
+  }
+
+  @media (max-width: 850px){
+    .button{
+        display: unset;
+    }
+}
